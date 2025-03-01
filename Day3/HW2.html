@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset >
+        <legend>Please enter your personal details: </legend>
+        <form action="" target="_blank">
+            <label for="fname">First Name*:</label>
+            <input type="text" class="name" required id="fname"><br><br>
+            <label for="lname">Last Name*:</label>
+            <input type="text" class="name" required id="lname"><br><br>
+            <label for="sadd">Street address:</label>
+            <input type="text" id="sadd"><br><br>
+            <label for="town">Town/City:</label>
+            <input type="text" id="town"><br><br>
+            <label for="tele">Telephone:</label>
+            <input type="telephone" id="tele"><br><br>
+            <label for="ph">Mobile:</label>
+            <input type="phone" id="ph"><br><br>
+            <label for="email">Email address*:</label>
+            <input type="email" id="email" required><br><br>
+            <p>Field marked with * are required</p>
+            <input type="submit" >
+        </form>
+    </fieldset>
+    <form action="" target="_blank">
+        <fieldset>
+            <h1>Welcome to Mr. Rakoczy's Popcorn Sales Site Extravaganza</h1>
+            <label for="bname">Buyer's Name:</label>
+            <input type="text" id="bname"><br><br>
+            <label for="sadd">Street address:</label>
+            <input type="text" id="sadd"><br><br>
+            <label for="city">City, Province, Postal Code:</label>
+            <input type="text" id="city"><br><br>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Unpopped Popcorn (1lb.)</td>
+                        <td>$3.00</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Caramel Popcorn (2lb. canister)</td>
+                        <td>$3.50</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Caramel Nut Popcorn (2lb. canister)</td>
+                        <td>$4.50</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Toffee Nut Popcorn (2lb. canister)</td>
+                        <td>$5.00</td>
+                        <td><input type="number"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <label for="pay">Payment Method:</label><br><br>
+            <input type="radio" name="Name" id="visa">
+            <label for="visa">Visa</label><br>
+            <input type="radio" name="Name" id="Master">
+            <label for="Master">Master Card</label><br>
+            <input type="radio" name="Name" id="Discover">
+            <label for="Discover">Master Card</label><br>
+            <input type="radio" name="Name" id="Check">
+            <label for="Check">Check</label><br><br>
+            <input type="submit" value="Submit Order">
+        </fieldset>
+    </form>
+    <form action="" target="_blank">
+        <h1>Employee Registration Form</h1>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fname">First Name*:</label>
+            <input type="text" required id="fname">
+            <label for="lname">Last Name*:</label>
+            <input type="text" required id="lname"><br><br>
+            <label for="email">Email address*:</label>
+            <input type="email" id="email" required>
+            <label for="ph">Mobile:</label>
+            <input type="phone" id="ph"><br><br>
+
+            <input type="radio" name="Gen" id="Gen">
+            <input type="date" name="" id="">
+        </fieldset>
+    </form>
+</body>
+</html>

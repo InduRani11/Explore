@@ -1,0 +1,8 @@
+.name{
+    color: green;
+    background-color: aqua;
+}
+
+#ph, #email{
+    margin: 40px;
+}
