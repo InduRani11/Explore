@@ -1,0 +1,88 @@
+/* div {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+}
+
+div:hover {
+    background-color: black;
+    color: white;
+}
+
+div:active {
+    background-color: chartreuse;
+}
+
+div::before {
+    content: "before";
+    display: block;
+    background-color: rgb(50, 201, 100);
+    border: 5px solid black;
+}
+
+div::after {
+    content: "hello";
+    display: block;
+    background-color: blue;
+    border: 5px solid black;
+} */
+/* .div{
+    display: inline-block;
+    width: 400px;
+    height: fit-content;
+    min-height: 100px;
+    font-size: 60px;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    background-color: aqua;
+}
+span+.div{
+    float: inline-end;
+    color: brown;
+}
+span{
+
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+} */
+
+/* div{
+
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: aqua;
+}
+
+#sp2{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+} */
+
+/* #sp2{
+    background-color: blueviolet;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    right: 20px;
+    text-align: center;
+    justify-content: center;
+    bottom: 20px;
+    border-radius: 50%;
+
+
+} */
+/* #sp2 {
+    background-color: blueviolet;
+    position: sticky;
+    height: 40px;
+    width: 40px;
+    left: 10px;
+    text-align: center;
+    justify-content: center;
+    top: 12px;
+    border-radius: 50%;
+} */
