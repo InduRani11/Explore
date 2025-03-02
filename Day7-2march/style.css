@@ -1,0 +1,70 @@
+/* a[href~="explore"]{
+    background-color: blue;
+    color: white;
+}
+a[target="_self"]{
+    background-color: yellow;
+} */
+ /* div{
+            display: flex;
+            height: 500px;
+            width: 900px;
+
+            background-color: aqua;
+            margin: 20px;
+            border: 1px solid black;
+            outline: 1px solid red;
+            outline-offset: 10px;
+
+        } */
+/*
+*{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items:center;
+            align-items: stretch; deafault
+            height: 300px;
+            padding: 20px;
+            background-color: aqua;
+            margin: 20px;
+            border: 1px solid black;
+
+        }
+        button{
+            height: ;
+            width: 50px;
+            min-height: 30px;
+
+        }
+        .B{
+            min-height: 50px;
+        }
+        .active{
+            min-height: 60px;
+        }
+*/
+/*
+div{
+            display: flex;
+            /*flex-direction: row;
+            flex-wrap:wrap-reverse;
+            flex-flow: row-reverse wrap-reverse;
+            justify-content: space-evenly;
+            align-items:center;
+            align-items: stretch;deafault
+
+            flex-flow: wr;
+            height: 300px;
+            padding: 20px;
+            background-color: aqua;
+            margin: 20px;
+            border: 1px solid black;
+
+        }
+*/
+ 

@@ -4,11 +4,11 @@
     background-color: aqua;
 }
 
-div:hover {
+div:focus {
     background-color: black;
     color: white;
-}
-
+} */
+/*
 div:active {
     background-color: chartreuse;
 }
@@ -24,8 +24,8 @@ div::after {
     content: "hello";
     display: block;
     background-color: blue;
-    border: 5px solid black;
-} */
+    border: 5px solid black; */
+/* } */
 /* .div{
     display: inline-block;
     width: 400px;
