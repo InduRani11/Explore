@@ -66,14 +66,19 @@ nav ul a{
 
 .cta:hover {
     color: #172937;
+    padding: 3px 23px;
     background-color: #F37021;
+    border: 3px solid #f37021;
+    box-shadow:inset 0 0 10px rgb(160, 157, 157);
 
 }
 
 .intro {
+    width: 100dvw;
     background-color: #172937;
     color: #ffffff;
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 68px 70px;
 }
@@ -107,7 +112,11 @@ nav ul a{
     max-width: 580px;
     vertical-align: middle;
 }
-
+section{
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+}
 .intro-content span {
     color: #F37021;
 }
@@ -121,11 +130,12 @@ nav ul a{
 .skill{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .skill-container{
-    width: 90%;
+    width: 95dvw;
     background-color: white;
     display: flex;
     flex-flow: row wrap;
@@ -169,7 +179,7 @@ nav ul a{
 }
 .Video{
 
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,6 +197,7 @@ nav ul a{
     font-size: 28px;
     font-weight: 400;
     line-height: 100%;
+    text-align: center;
 
 }
 .Video button{
@@ -198,14 +209,15 @@ nav ul a{
     color: white;
     border-radius: 8px;
     border: 1px solid #f37021;
-    margin-block: 12px;
+    /* margin-block: 12px; */
 }
 .video-list{
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 95dvw;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
+    padding: 35px;
 }
 .video-element{
     display: flex;
@@ -213,7 +225,7 @@ nav ul a{
     background-color: #fff;
     border-radius: 20px;
     gap: 8px;
-    max-width: 33%;
+    min-width: 33%;
     padding-bottom: 25px;
 
 }
@@ -248,6 +260,10 @@ nav ul a{
     gap: 12px;
     min-height: 68px;
     flex-grow: 1;
+    align-items: flex-start;
+}
+.video-element-content p{
+    text-align: start;
 }
 .project{
 
@@ -257,6 +273,7 @@ nav ul a{
     align-items: center;
     gap: 40px;
     justify-content: center;
+
 }
 .project h1{
     font-size: 40px;
@@ -267,47 +284,56 @@ nav ul a{
     font-size: 28px;
     font-weight: 400;
     line-height: 100%;
+    text-align: center;
 }
 .project-card-div{
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 95dvw;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
+    padding: 35px;
 }
 .project-card{
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 20px;
-    gap: 18px;
-    max-width: 33%;
+    gap: 20px;
+    min-width: 33%;
     padding-bottom: 30px;
 
 }
-.project-card h4{
+.p-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.p-content h4{
     font-size: 25px;
     font-weight: 700;
     line-height: 100%;
     color: #f37021;
     padding-left: 30px;
 }
-.project-card h6{
+.p-content h6{
     font-size: 18px;
     font-weight: 500;
     padding-left: 30px;
     line-height: 100%;
 }
-.project-card p{
+.p-content p{
     font-size: 16px;
     font-weight: 400;
     padding-left: 30px;
     line-height: 100%;
+    text-align: start;
 }
 .project-card img{
     width: 100%;
     height: 250px;
     border-radius: 20px 20px 0 0;
+    object-fit:fill;
 }
 .education{
 
@@ -335,8 +361,9 @@ nav ul a{
 .education-div{
     display: flex;
     flex-flow: row wrap;
-    width: 90%;
-    gap: 30px;
+    width: 95dvw;
+    gap: 50px;
+    padding: 35px;
 
 }
 .edu-card{
@@ -352,10 +379,12 @@ nav ul a{
 
 }
 .edu-card img{
+
     width: 25%;
     height: 130px;
     padding: 20px;
-    border-radius: 50%;
+    border-radius: 20%;
+    object-fit: contain;
 }
 .edu-content{
     flex-grow: 1;
@@ -402,6 +431,7 @@ footer p{
     font-size: 28px;
     font-weight: 400;
     line-height: 100%;
+    text-align: center;
 }
 footer a{
     color: #fff;

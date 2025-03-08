@@ -13,9 +13,73 @@
     <link rel="stylesheet" href="profile.css">
 
     <style>
-        
+        @media (max-width:950px) {
+            nav {
+                display: none;
+            }
+
+            .intro {
+                flex-direction: column-reverse;
+            }
+
+            .intro-content h2 {
+                align-items: center;
+            }
+
+            .video-list {
+                flex-flow: row wrap;
+                width: 100%;
+            }
+
+            .video-element {
+                min-width: 100%;
+                flex-grow: 1;
+                flex-direction: row;
+                height: 200px;
+                align-items: center;
+                padding: 15px 15px;
+            }
+            .Video{
+                gap: 30px;
+                margin-top: 50px;
+            }
+            .video-element iframe {
+                width: 60%;
+                flex-direction: row;
+                height: 100%;
+                border-radius: 30px;
+                padding: 5px;
+            }
+
+            .video-element-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                max-height: 200px;
+                overflow: auto;
+            }
+
+            .project-card-div {
+                flex-flow: row wrap;
+                width: 100%;
+            }
+
+            .project-card {
+                min-width: 100%;
+                flex-grow: 1;
+                flex-direction: row;
+                height: 300px;
+                align-items: center;
+                padding: 15px 15px;
+            }
+            .project-card img{
+                width: 60%;
+                border-radius: 10px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="brand-container">
@@ -39,7 +103,9 @@
             <div class="intro-content">
                 <h2 class="intro-title">Hi, I am Indu Rani</h2>
                 <h3 class="intro-subtitle">I am passionate about <span>Web Development & DSA </span></h3>
-                <p class="intro-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem minima sequi quo est laboriosam similique earum cumque atque sit modi numquam saepe ratione consectetur pariatur, incidunt eligendi, veritatis, soluta unde.
+                <p class="intro-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem minima sequi
+                    quo est laboriosam similique earum cumque atque sit modi numquam saepe ratione consectetur pariatur,
+                    incidunt eligendi, veritatis, soluta unde.
                 </p>
             </div>
             <div class="intro-img">
@@ -51,61 +117,38 @@
             <p>Here are some skills on which I am working</p>
             <div class="skill-container">
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-c-48.png" alt="">
                     <span>C Programming</span>
                 </div>
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-c-64.png" alt="">
                     <span>C++ programming</span>
                 </div>
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-python-24.png" alt="">
                     <span>Python</span>
                 </div>
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-sql-60.png" alt="">
                     <span>SQL</span>
                 </div>
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-java-48.png" alt="">
                     <span>Java</span>
                 </div>
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-html-48.png" alt="">
                     <span>HTML</span>
                 </div>
 
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-css-100.png" alt="">
                     <span>CSS</span>
-                </div>
-                <div class="one-skill">
-                    <img src="img.jpeg" alt="">
-                    <span>C++ programming</span>
-                </div>
-                <div class="one-skill">
-                    <img src="img.jpeg" alt="">
-                    <span>Python</span>
-                </div>
-                <div class="one-skill">
-                    <img src="img.jpeg" alt="">
-                    <span>SQL</span>
-                </div>
-                <div class="one-skill">
-                    <img src="img.jpeg" alt="">
-                    <span>Java</span>
-                </div>
-                <div class="one-skill">
-                    <img src="img.jpeg" alt="">
-                    <span>HTML</span>
                 </div>
 
+
                 <div class="one-skill">
-                    <img src="img.jpeg" alt="">
-                    <span>CSS</span>
-                </div>
-                <div class="one-skill">
-                    <img src="img.jpeg" alt="">
+                    <img src="icons8-javascript-50.png" alt="">
                     <span>JavaScript</span>
                 </div>
 
@@ -117,23 +160,32 @@
             <button>Visit my LinkedIn</button>
             <div class="video-list">
                 <div class="video-element">
-                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="video-element-content">
                         <h4>Day 1</h4>
                         <h1>Topic 1</h1>
-                        <p>Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eveniet quaerat maiores, debitis provident iusto blanditiis magnam! Modi itaque tempore aperiam natus perferendis, provident cupiditate quod animi perspiciatis, eaque possimus! dolor, sit amet consectetur adipisicing elit. Enim, tempora!</p>
+                        <p>Lojhgfdgnlit. Enim, tempora!</p>
                     </div>
                 </div>
                 <div class="video-element">
-                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="video-element-content">
                         <h4>Day 2</h4>
                         <h1>Topic 2</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, tempora!</p>
+                        <p>Lorem ipsum dr adipisicing elit. Enim, tempora!</p>
                     </div>
                 </div>
                 <div class="video-element">
-                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="video-element-content">
                         <h4>Day 3</h4>
                         <h1>Topic 3</h1>
@@ -143,26 +195,33 @@
             </div>
         </section>
         <section class="project">
+
             <h1>Projects</h1>
             <p>I have worked on a wide range of projects. Here are some of my projects.</p>
             <div class="project-card-div">
                 <div class="project-card">
-                    <img src="img.jpeg" alt="">
-                    <h4>Project Name</h4>
-                    <h6>About the project</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                    <img src="p1.jpg" alt="">
+                    <div class="p-content">
+                        <h4>To Do List App</h4>
+                        <h6>Frontend project</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="p2.jpg" alt="">
+                    <div class="p-content">
+                        <h4>TIC-TAC-TO</h4>
+                        <h6>Frontend project</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <img src="img.jpeg" alt="">
-                    <h4>Project Name</h4>
-                    <h6>About the project</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
-                </div>
-                <div class="project-card">
-                    <img src="img.jpeg" alt="">
-                    <h4>Project Name</h4>
-                    <h6>About the project</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                    <div class="p-content">
+                        <h4>Project Name</h4>
+                        <h6>About the project</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -175,33 +234,33 @@
                     <div class="edu-content">
                         <h2>Explorin</h2>
                         <h4>2025-2025</h4>
-                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Adarsh Nagar, Roorkee</p>
                     </div>
-                    <img src="img.jpeg" alt="">
+                    <img src="exp.jpg" alt="">
                 </div>
                 <div class="edu-card">
                     <div class="edu-content">
-                        <h2>Explorin</h2>
-                        <h4>2025-2025</h4>
-                        <p>Lorem ipsum dolor sit.</p>
+                        <h2>COER University</h2>
+                        <h4>2023-2027</h4>
+                        <p>Roorkee, Haridwar</p>
                     </div>
-                    <img src="img.jpeg" alt="">
+                    <img src="coer.jpg" alt="">
                 </div>
                 <div class="edu-card">
                     <div class="edu-content">
-                        <h2>Explorin</h2>
-                        <h4>2025-2025</h4>
-                        <p>Lorem ipsum dolor sit.</p>
+                        <h2>Radiant public School</h2>
+                        <h4>2018-2022</h4>
+                        <p>Nanauta, Saharanpur</p>
                     </div>
-                    <img src="img.jpeg" alt="">
+                    <img src="rps.jpg" alt="">
                 </div>
                 <div class="edu-card">
                     <div class="edu-content">
-                        <h2>Explorin</h2>
-                        <h4>2025-2025</h4>
-                        <p>Lorem ipsum dolor sit.</p>
+                        <h2>Scholars Academy</h2>
+                        <h4>2009-2018</h4>
+                        <p>Tikrol, Nanauta, Saharanpur</p>
                     </div>
-                    <img src="img.jpeg" alt="">
+                    <img src="saaa.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -210,7 +269,7 @@
         <h1>Contact</h1>
         <p>Feel free to reach out to me for any questions or opportunities!</p>
         <div class="link-div">
-            <a href="http://" >LinkedIn</a>
+            <a href="http://">LinkedIn</a>
             <a href="mailto:">pavitramindu999@gmail.com</a>
             <a href="http://">Github</a>
         </div>
