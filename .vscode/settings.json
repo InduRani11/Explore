@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/Day5-Online/index.html"
+    "livePreview.defaultPreviewPath": "/Day5-Online/index.html",
+    "liveServer.settings.port": 5501
 }
