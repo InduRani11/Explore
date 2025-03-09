@@ -74,4 +74,7 @@ if(a==true){
         alert("Failed! and Grade is E");
         console.log("Failed! and Grades is E");
     }
+}else {
+    alert("okk, byeee...");
+    console.log("okk, byeee...");
 }
