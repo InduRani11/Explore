@@ -81,7 +81,7 @@
 // console.log(main.dataset.arr)
 
 // const main=document.getElementById("main");
-// const newEle =document.createElement("div");
+const newEle =document.createElement("div");
 // console.log(main)
 // console.log(main1)
 // console.log(main.classList)
@@ -92,6 +92,7 @@
 // // main.removeChild(newEle);
 // // newEle.remove();
 // // main.prepend(newEle);
-// main.append(newEle);
+// main.append(nezwEle);
 // main.append(newEle);
 // // main.appendChild(newEle);
+// newEle.innerHTML="djfgvdfv";

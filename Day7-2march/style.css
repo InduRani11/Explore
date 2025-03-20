@@ -5,7 +5,7 @@
 a[target="_self"]{
     background-color: yellow;
 } */
- /* div{
+ div{
             display: flex;
             height: 500px;
             width: 900px;
@@ -16,8 +16,7 @@ a[target="_self"]{
             outline: 1px solid red;
             outline-offset: 10px;
 
-        } */
-/*
+        }
 *{
             margin: 0;
             box-sizing: border-box;
@@ -27,7 +26,7 @@ a[target="_self"]{
             flex-direction: row;
             justify-content: space-evenly;
             align-items:center;
-            align-items: stretch; deafault
+            /* align-items: stretch; deafault */
             height: 300px;
             padding: 20px;
             background-color: aqua;
@@ -36,7 +35,7 @@ a[target="_self"]{
 
         }
         button{
-            height: ;
+            /* height: ; */
             width: 50px;
             min-height: 30px;
 
@@ -48,17 +47,17 @@ a[target="_self"]{
             min-height: 60px;
         }
 */
-/*
+
 div{
             display: flex;
-            /*flex-direction: row;
+            /* flex-direction: row; */
             flex-wrap:wrap-reverse;
             flex-flow: row-reverse wrap-reverse;
             justify-content: space-evenly;
             align-items:center;
-            align-items: stretch;deafault
+            align-items: stretch;
 
-            flex-flow: wr;
+            /* flex-flow: wr; */
             height: 300px;
             padding: 20px;
             background-color: aqua;
@@ -66,5 +65,4 @@ div{
             border: 1px solid black;
 
         }
-*/
- 
+

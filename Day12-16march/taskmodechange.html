@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 40px;
+            background-color: rgb(165, 238, 214);
+        }
+        .dark{
+            background-color: black;
+            color: white;
+
+        }
+        .div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .div>h1{
+           margin-left: 20%;
+        }
+        .div>p{
+            width: 60%;
+        }
+        .div>img{
+
+            border-radius: 10px;
+        }
+        @media (max-width:800px ){
+
+            .div{
+                flex-direction: column-reverse;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        button{
+            line-height: 100%;
+            background-color: rgb(185, 179, 179);
+            border: 2px solid rgb(92, 89, 89);
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="div">
+    <h1>Mode Changing Task</h1>
+    <div class="header div">
+        <h1 id="heading">Theme randomrizer</h1>
+        <button onclick="theme()"> Change Mode</button>
+
+    </div>
+    <div class="div">
+        <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis esse sapiente voluptas? Enim deserunt optio temporibus illum dicta iure dolorum numquam? Atque quaerat est laborum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nesciunt reiciendis neque tempora voluptatem ipsa error sequi maiores officia! Nisi magni odio laudantium libero ad sapiente nobis possimus. Mollitia, voluptates.natus facere minus itaque. Illum. sit amet consectetur adipisicing elit. Fuga deleniti, maiores quis minus est sunt culpa, non ducimus consequuntur tenetur magnam, porro dignissimos nam itaque cum facilis sapiente nulla illum.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s" alt="">
+    </div>
+
+    <script src="taskmodechange.js"></script>
+</body>
+</html>

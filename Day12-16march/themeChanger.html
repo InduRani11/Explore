@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task major</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #btn1 {
+            background-color: grey;
+        }
+
+        #btn2 {
+            background-color: rgb(48, 45, 45);
+        }
+
+        #btn3 {
+            background-color: rgb(219, 32, 32);
+        }
+
+        #btn4 {
+            background-color: green;
+        }
+
+        #btn5 {
+            background-color: yellow;
+        }
+
+        body {
+            background-image: linear-gradient(89.7deg, rgba(223, 0, 0, 1) 2.7%, rgba(214, 91, 0, 1) 15.1%, rgba(233, 245, 0, 1) 29.5%, rgba(23, 255, 17, 1) 45.8%, rgba(29, 255, 255, 1) 61.5%, rgba(5, 17, 255, 1) 76.4%, rgba(202, 0, 253, 1) 92.4%);
+            ;
+
+            background-color: rgb(202, 233, 222);
+        }
+
+        .btns-container {
+            min-height: 5dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+            gap: 20px;
+
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        .btn {
+            width: 60px;
+            border-radius: 12px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            border: 3px solid black;
+            border-radius: 16px;
+            margin: 3px;
+            padding: 15px;
+        }
+
+        .box {
+            border: 3px solid black;
+            min-width: 30px;
+            border-radius: 10px;
+            height: 150px;
+        }
+
+        @media (min-width:684px) and (max-width:1100px) {
+            .container {
+                padding: 60px;
+                flex-flow: row wrap;
+                gap: 30px;
+            }
+
+            .box {
+                min-width: 45%;
+
+                flex-grow: 1;
+                /*margin: 8px;*/
+            }
+        }
+
+        @media (min-width:1100px) {
+            .container {
+                flex-direction: row;
+                justify-content: flex-start;
+                padding-block: 60px;
+            }
+
+            .box {
+                width: 200px;
+                height: 300px;
+                margin: 4px;
+            }
+        }
+        .btn-block{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            background-image: linear-gradient(89.7deg, rgba(223, 0, 0, 1) 2.7%, rgba(214, 91, 0, 1) 15.1%, rgba(233, 245, 0, 1) 29.5%, rgba(23, 255, 17, 1) 45.8%, rgba(29, 255, 255, 1) 61.5%, rgba(5, 17, 255, 1) 76.4%, rgba(202, 0, 253, 1) 92.4%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+        <h1>Theme Changer(Responsive for different devices)</h1>
+        <div class="btns-container">
+            <div class="btn-block">
+                <button onclick="themechange('light')" id="btn1"></button>
+                <p>Light Theme</p>
+            </div>
+            <div class="btn-block">
+                <button onclick="themechange('dark')" id="btn2"></button>
+                <p>Dark Theme</p>
+            </div>
+            <div class="btn-block">
+                <button onclick="themechange('red')" id="btn3"></button>
+                <p>Red Theme</p>
+            </div>
+            <div class="btn-block">
+                <button onclick="themechange('green')" id="btn4"></button>
+                <p>Green Theme</p>
+            </div>
+            <div class="btn-block">
+                <button onclick="themechange('yellow')" id="btn5"></button>
+                <p>Yellow Theme</p>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <script src="themechanger.js"></script>
+</body>
+
+</html>
