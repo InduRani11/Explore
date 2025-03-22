@@ -30,13 +30,11 @@ function changeTheme() {
     const index=randomNo(colors.length)
     const color=colors[index];
     body.style.backgroundColor = color;
-    // btn.removeEventListener("click",changeTheme)
-
+    // btn.removeEventListener("click",changeTheme);
 }
-changeTheme();
-btn.addEventListener("click",changeTheme);
+// changeTheme();
+console.log(btn.id);
+// btn.addEventListener("click",changeTheme);
 // console.log(Event)
 // btn.removeEventListener("click",changeTheme)
-
 // document.body.addEventListener("click",changeTheme);
-

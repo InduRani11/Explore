@@ -32,6 +32,7 @@ const arr = {
 let theme="none";
 function themechange(theme) {
     //let theme=theme;
+    console.log(theme)
     for (let i = 0; i < 4; i++) {
         boxes[i].style.backgroundColor = arr[theme].bgColor[i];
         container.style.backgroundColor = arr[theme].bgColor[4];
@@ -52,3 +53,20 @@ function themechange(theme) {
 // const btn5=document.querySelector('#btn5');
 // console.log(btn5)
 // btn5.addEventListener("click",themechange('green'));
+
+//
+// const btn1=document.querySelector('#btn1');
+// console.log(btn1)
+// btn1.addEventListener("click",()=>{themechange('light')});
+// const btn2=document.querySelector('#btn2');
+// console.log(btn2)
+// btn2.addEventListener("click",()=>{themechange('dark')});
+// const btn3=document.querySelector('#btn3');
+// console.log(btn3)
+// btn3.addEventListener("click",()=>{themechange('red')});
+// const btn4=document.querySelector('#btn4');
+// console.log(btn4)
+// btn4.addEventListener("click",()=>{themechange('green')});
+// const btn5=document.querySelector('#btn5');
+// console.log(btn5)
+// btn5.addEventListener("click",()=>{themechange('yellow')});

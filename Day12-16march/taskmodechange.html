@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         *{
             box-sizing: border-box;
@@ -58,14 +59,23 @@
         h1{
             text-align: center;
         }
+        #flexSwitchCheckChecked{
+            width: 80px;
+            height: 40px;
+            background-color: rgb(124, 118, 118);
+            border: 2px solid rgb(41, 39, 39);
+        }
     </style>
 </head>
 <body id="div">
     <h1>Mode Changing Task</h1>
     <div class="header div">
         <h1 id="heading">Theme randomrizer</h1>
-        <button onclick="theme()"> Change Mode</button>
-
+        <!-- <button onclick="theme()"> Change Mode</button> -->
+        <div id="divbtn" class="form-check form-switch">
+            <input class="form-check-input  " type="checkbox" role="switch" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+          </div>
     </div>
     <div class="div">
         <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis esse sapiente voluptas? Enim deserunt optio temporibus illum dicta iure dolorum numquam? Atque quaerat est laborum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nesciunt reiciendis neque tempora voluptatem ipsa error sequi maiores officia! Nisi magni odio laudantium libero ad sapiente nobis possimus. Mollitia, voluptates.natus facere minus itaque. Illum. sit amet consectetur adipisicing elit. Fuga deleniti, maiores quis minus est sunt culpa, non ducimus consequuntur tenetur magnam, porro dignissimos nam itaque cum facilis sapiente nulla illum.</p>

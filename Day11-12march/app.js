@@ -81,7 +81,7 @@
 // console.log(main.dataset.arr)
 
 // const main=document.getElementById("main");
-const newEle =document.createElement("div");
+// const newEle =document.createElement("div");
 // console.log(main)
 // console.log(main1)
 // console.log(main.classList)
@@ -96,3 +96,7 @@ const newEle =document.createElement("div");
 // main.append(newEle);
 // // main.appendChild(newEle);
 // newEle.innerHTML="djfgvdfv";
+
+function Idp(){
+    console.log(this.id);
+}
