@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            width: 100dvw;
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            line-height: 0%;
+
+        }
+        .our-body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+            background-color: blue;
+            padding-block: 20px;
+            padding-inline: 0px;
+        }
+        .temp-body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-block: 20px;
+            width: 100%;
+        }
+        .temp-body img{
+           width: 30%;
+        }
+        .data-cont{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 50px;
+        }
+        #search{
+            width: 80% ;
+            height: 35px;
+            border-radius: 20px;
+            border: 2px solid white;
+            padding-left: 20px;
+            font-size: 26px;
+
+        }
+        #search-btn{
+            width: 18%;
+            height: 35px;
+            border-radius: 45%;
+            border: 2px solid white;
+
+        }
+        #search-btn img{
+            width: 60%;
+            height: 60%;
+        }
+        img{
+            width: 40%;
+            height: 80%;
+        }
+        .humidity-cont, .wind-speed-cont{
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+        .search-container{
+            padding-inline: 15px ;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="our-body">
+        <div class="search-container">
+            <input type="search" placeholder="search" name="search" id="search">
+            <button id="search-btn"><img src="search.png" alt=""></button>
+        </div>
+        <div class="temp-body">
+            <img src="cloud.png" alt="">
+            <p> <span id="temperature">24</span>*C</p>
+            <p id="location">London</p>
+        </div>
+        <div class="data-cont">
+            <div class="humidity-cont">
+
+                    <img src="humidity.png" alt="">
+
+                <div>
+                    <p><span id="humidity">80</span>%</p>
+                    <p>humidity</p>
+                </div>
+            </div>
+            <div class="wind-speed-cont">
+
+                    <img src="wind.png" alt="">
+
+
+                <div>
+                    <p><span id="wind-speed">18</span>km/hr</p>
+                    <p>wind-speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weatherApp.js"></script>
+</body>
+</html>

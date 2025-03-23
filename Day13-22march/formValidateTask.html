@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            width: 50%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 30px;
+
+        }
+        #h1 {
+            align-self: center;
+            text-align: center;
+        }
+        .inp-block {
+
+            font-size: x-large;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .inp-block input {
+            width: 100%;
+            line-height: 20px;
+        }
+
+        button {
+            width: 100%;
+            background-color: blue;
+            border: 2px solid blue;
+            border-radius: 8px;
+            height: 35px;
+        }
+
+        p {
+            margin-bottom: 8px;
+            color: red;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <form novalidate="true" id="form" action="">
+
+        <h1 id="h1">Sign Up</h1>
+        <label class="inp-block" for="name">Username:
+            <input type="text" class="" placeholder="Choose a username" id="name">
+            <p id="usererror" class="error"></p>
+        </label>
+        <label class="inp-block" for="email">Email:
+            <input type="text" class="" placeholder="Enter your email" id="email">
+            <p id="emailerror" class="error"></p>
+        </label>
+        <label class="inp-block" for="pass">Password:
+            <input type="password" class="" placeholder="Enter a strong password" id="pass">
+            <p id="passerror" class="error"></p>
+        </label>
+        <label class="inp-block" for="cpass">Confirm Password:
+            <input type="password" class="" placeholder="Reenter your password" id="cpass">
+            <p id="cpasserror" class="error"></p>
+        </label>
+        <button type="submit"> Sign Up</button>
+        <script src="formVatidateTask.js"></script>
+    </form>
+</body>
+
+</html>
