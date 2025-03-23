@@ -16,7 +16,6 @@ const cpass = document.getElementById('cpass');
 console.log(form)
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     if (user.value === "") {
         usererror.textContent = "Useername is required"
     } else if (user.value.length < 5) {
@@ -25,6 +24,8 @@ form.addEventListener('submit', (e) => {
         usererror.textContent = "Useername's maximum length is 15"
     } else if (['admins', 'username', 'adminstration'].includes(user.value)) {
         usererror.textContent = "Useername not correct"
+    }else if (!(user.value==user.value.toUpperCase()||user.value==user.value.toLowerCase())) {
+        usererror.textContent = "Useername must be in compltely lower or compltely upper case"
     }
 
     if (!validEmail(email.value)) {
@@ -41,6 +42,7 @@ form.addEventListener('submit', (e) => {
     if (pass.value != cpass.value) {
         cpasserror.textContent = "not matched with password";
     }
+
 });
 function validEmail(val) {
     const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/gm;
