@@ -72,6 +72,11 @@ async function getNews(category) {
             // console.log(selectfilter);
             getNews(selectfilter);
         })
+        countryFilter.addEventListener("change", (e) => {
+            const selectfilter = e.target.value;
+            // console.log(selectfilter);
+            getNews(selectfilter);
+        })
         searchBtn.addEventListener('click', (e) => {
 
             const inputVal = searchInput.value;
