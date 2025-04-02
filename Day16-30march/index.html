@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="brand">NewsInsight360 </h1>
+            <div class="search" id="search">
+                <input id="search-input" type="search" name="" placeholder="Search the category">
+                <button id="search-btn" type="submit"><img
+                        src="https://img.icons8.com/?size=15&id=26138&format=png&color=000000"
+                        alt="arrow icon"></button>
+            </div>
+
+            <div class="filters">
+                <select name="" id="Category-filter"></select>
+            </div>
+            <div class="filters">
+                <select name="" id="Country-filter">
+                    <option value="in">India</option>
+                    <option value="us">USA</option>
+                    <option value="au">Australia</option>
+                    <option value="ru">Russia</option>
+                    <option value="fr">France</option>
+                    <option value="gb">United kingdom</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="news-articles" id="news-articles">
+            <template id="article-templete">
+                <article href="hhjvh" class="news-article">
+                    <span class="source"></span>
+                    <img class="image" src="" alt="Article Image" />
+                    <h2 class="title"></h2>
+                    <div class="metadata">
+                        <span class="author">Alex</span>
+
+                        <span class="date"></span>
+                    </div>
+                    <p onmouseover="" title="" class="description"></p>
+
+                </article>
+            </template>
+            <script src="app.js"></script>
+    </main>
+</body>
+
+</html>

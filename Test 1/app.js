@@ -1,5 +1,5 @@
-const main=document.getElementById("main");
-const input=document.getElementById('input');
+const main=document.getElementById( "main");
+const input=document.getElementById( 'input');
 const apiUsers='https://jsonplaceholder.typicode.com/users';
 const imageApi='https://robohash.org/'
 fetch(apiUsers).then((data)=>{
@@ -22,7 +22,7 @@ fetch(apiUsers).then((data)=>{
                     createADiv(data,i);
                 }
             }else{
-                let data1=data.filter((val,i)=>{ return val.name.includes(input.value) ||val.name.includes(input.value.toUpperCase())||val.name.includes(input.value.toLowerCase())})
+                let data1=data.filter((val,i)=>{ return val.name.toUpperCase().includes(input.value.toUpperCase())})
                 console.log(data1);
                 for(let i=0;i<data1.length;i++){
                     createADiv(data1,i);

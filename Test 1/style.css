@@ -33,6 +33,9 @@ header{
     padding-block: 20px;
     text-align: center;
     font-size: 36px;
+    border: none;
+    position: sticky;
+    top: 0;
 }
 main{
     display: flex;
