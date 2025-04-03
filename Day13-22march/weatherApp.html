@@ -1,75 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="shortcut icon" href="cloudy.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        *{
+        * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
         body{
             width: 100dvw;
-            background-color: aqua;
+            height: 100dvh;
+            background-color: rgb(150, 240, 240);
             display: flex;
             flex-direction: row;
             justify-content: center;
+            align-items: center;
             line-height: 0%;
 
         }
-        .our-body{
+        .our-body {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 50%;
-            background-color: blue;
+            background-color: rgb(91, 91, 234);
             padding-block: 20px;
             padding-inline: 0px;
+            border-radius: 8px;
+            border: 8px solid rgb(255, 255, 255);
+            box-shadow: 6px 6px 4px rgba(34, 33, 33, 0.5);
         }
-        .temp-body{
+
+        .temp-body {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding-block: 20px;
-            width: 100%;
+            gap: 20px;
         }
-        .temp-body img{
-           width: 30%;
-        }
-        .data-cont{
+
+
+
+        .data-cont {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            gap: 50px;
+            padding-inline: 8px;
+            gap: 20px;
         }
-        #search{
-            width: 80% ;
-            height: 35px;
+        .data{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        p{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #search {
+            width: 80%;
+
             border-radius: 20px;
             border: 2px solid white;
             padding-left: 20px;
-            font-size: 26px;
+            font-size: 2rem;
 
         }
-        #search-btn{
-            width: 10%;
-            height: 35px;
-            border-radius: 45%;
+
+        #search-btn {
+            width: 15%;
+            height: 2rem;
+            border-radius: 20px;
             border: 2px solid white;
 
         }
-        #search-btn img{
-            width: 60%;
-            height: 60%;
-        }
-        img{
+
+
+
+        img {
             width: 40%;
-            height: 80%;
+            height: 70%;
         }
-        .humidity-cont, .wind-speed-cont{
+
+        .humidity-cont,
+        .wind-speed-cont {
             display: flex;
             flex-direction: row;
             gap: 20px;
@@ -77,10 +98,12 @@
             justify-content: center;
             width: 50%;
         }
-        .search-container{
-            padding-inline: 15px ;
+
+        .search-container {
+            padding-inline: 15px;
             display: flex;
             flex-direction: row;
+            align-items: center;
             gap: 20px;
             width: 100%;
         }
@@ -88,6 +111,7 @@
 
 
 </head>
+
 <body>
     <div class="our-body">
         <div class="search-container">
@@ -96,27 +120,22 @@
         </div>
         <div class="temp-body">
             <img src="cloud.png" alt="">
-            <span class="material-icons">cloudy</span>
-            <p> <span id="temperature">0</span>*F</p>
-            <p id="location"></p>
+            <!-- <span class="material-icons">cloudy</span> -->
+            <p> <span id="temperature"></span>*F</p>
+            <h2 id="location"></h2>
         </div>
         <div class="data-cont">
             <div class="humidity-cont">
-
-                    <img src="humidity.png" alt="">
-
-                <div class="da">
-                    <p><span id="humidity">0</span>%</p>
+                <img src="humidity.png" alt="">
+                <div class="data">
+                    <h2> <span id="humidity"></span>%</h2>
                     <p>humidity</p>
                 </div>
             </div>
             <div class="wind-speed-cont">
-
-                    <img src="wind.png" alt="">
-
-
+                <img src="wind.png" alt="">
                 <div class="data">
-                    <p><span id="wind-speed">0</span>km/hr</p>
+                    <h2><span id="wind-speed"></span> km/hr</h2>
                     <p>wind-speed</p>
                 </div>
             </div>
@@ -124,4 +143,5 @@
     </div>
     <script src="weatherApp.js"></script>
 </body>
+
 </html>

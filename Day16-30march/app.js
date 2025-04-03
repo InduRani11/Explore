@@ -1,5 +1,6 @@
 const templete = document.getElementById('article-templete');
 const categoryFilter = document.getElementById('Category-filter');
+const countryFilter = document.getElementById('Country-filter');
 const newsArticles = document.getElementById('news-articles');
 const search = document.getElementById('search')
 const searchInput = document.getElementById('search-input')
@@ -44,14 +45,14 @@ function getNewsFromSearch(data) {
     pushData(data);
 }
 
-const category = 'general'
-const countryCode = 'in';
+let category = 'general'
+let countryCode = 'in';
 const BASE_URL = "https://saurav.tech/NewsAPI/"
 // const top_headlines_api = `${BASE_URL}/top-headlines/category/${category}/${countryCode}.json`;
 
 
 const everything_api = `${BASE_URL}/everything/cnn.json`
-async function getNews(category) {
+async function getNews(category, countryCode) {
     try {
 
         const top_headlines_api = `${BASE_URL}/top-headlines/category/${category}/${countryCode}.json`;
@@ -59,7 +60,7 @@ async function getNews(category) {
         const data = (await response.json()).articles
         const response2 = await fetch(everything_api);
         const data2 = (await response2.json()).articles.slice(0,50);
-        console.log(data2)
+        // console.log(data2)
 
         if(category=='general'){
             pushData(data2);
@@ -67,16 +68,7 @@ async function getNews(category) {
         }else{
             pushData(data);
         }
-        categoryFilter.addEventListener("change", (e) => {
-            const selectfilter = e.target.value;
-            // console.log(selectfilter);
-            getNews(selectfilter);
-        })
-        countryFilter.addEventListener("change", (e) => {
-            const selectfilter = e.target.value;
-            // console.log(selectfilter);
-            getNews(selectfilter);
-        })
+
         searchBtn.addEventListener('click', (e) => {
 
             const inputVal = searchInput.value;
@@ -91,9 +83,6 @@ async function getNews(category) {
                 })
                 getNewsFromSearch(newData);
             }
-
-
-
         })
 
     }
@@ -103,4 +92,14 @@ async function getNews(category) {
         console.log("Fetch completed.");
     }
 }
-getNews(categories[0]);
+categoryFilter.addEventListener("change", (e) => {
+    category = e.target.value;
+    // console.log(selectfilter);
+    getNews(category,countryCode);
+})
+countryFilter.addEventListener("change", (e) => {
+    countryCode = e.target.value;
+    // console.log(selectfilter);
+    getNews(category,countryCode);
+})
+getNews(categories[0],countryCode);
