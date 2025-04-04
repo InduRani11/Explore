@@ -90,7 +90,7 @@ select {
   padding: 1rem;
   justify-content: center;
   max-width: var(--max-content-width);
-  /* margin: auto; */
+  margin: auto;
   padding-top: 2rem;
 }
 
