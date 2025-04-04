@@ -42,7 +42,14 @@ function pushData(data) {
 }
 
 function getNewsFromSearch(data) {
-    pushData(data);
+    console.log(data.length);
+    if(data.length==0){
+    newsArticles.innerHTML = "<h1> We have no news related your search.... </h1> <h4>Select any Category related to your interest</h4>";
+
+    }else{
+        pushData(data);
+    }
+
 }
 
 let category = 'general'
