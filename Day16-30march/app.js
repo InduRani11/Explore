@@ -34,8 +34,8 @@ function pushData(data) {
             articleData.publishedAt
         ).toLocaleString();
         article.querySelector(".description").innerText = articleData.description;
-        article.querySelector(".description").onmouseover = `()=>(${article.querySelector(".description").setAttribute("title",articleData.description)})`
-        article.querySelector(".title").onmouseover = `()=>(${article.querySelector(".title").setAttribute("title",articleData.title)})`
+        article.querySelector(".description").onmouseover = `()=>(${article.querySelector(".description").setAttribute("title", articleData.description)})`
+        article.querySelector(".title").onmouseover = `()=>(${article.querySelector(".title").setAttribute("title", articleData.title)})`
         newsArticles.append(article);
     });
 
@@ -43,10 +43,10 @@ function pushData(data) {
 
 function getNewsFromSearch(data) {
     console.log(data.length);
-    if(data.length==0){
-    newsArticles.innerHTML = "<h1> We have no news related your search.... </h1> <h4>Select any Category related to your interest</h4>";
+    if (data.length == 0) {
+        newsArticles.innerHTML = "<h1> We have no news related your search.... </h1> <h4>Select any Category related to your interest</h4>";
 
-    }else{
+    } else {
         pushData(data);
     }
 
@@ -66,47 +66,67 @@ async function getNews(category, countryCode) {
         const response = await fetch(top_headlines_api);
         const data = (await response.json()).articles
         const response2 = await fetch(everything_api);
-        const data2 = (await response2.json()).articles.slice(0,50);
+        const data2 = (await response2.json()).articles;
         // console.log(data2)
 
-        if(category=='general'){
+        if (category == 'general') {
             pushData(data2);
 
-        }else{
+        } else {
             pushData(data);
         }
 
-        searchBtn.addEventListener('click', (e) => {
+            searchBtn.addEventListener('click', (e) => {
+                let newData=[];
+                const inputVal = searchInput.value;
+                if(inputVal==''){
+                    if (category == 'general') {
+                        pushData(data2);
 
-            const inputVal = searchInput.value;
-            if(category=='general'){
-                const newData = data2.filter((val) => {
-                    return val.title.toUpperCase().includes(inputVal.toUpperCase())  || val.description.toUpperCase().includes(inputVal.toUpperCase())|| val.publishedAt.toUpperCase().includes(inputVal.toUpperCase())||val.source.name.toUpperCase().includes(inputVal.toUpperCase())
-                })
-                getNewsFromSearch(newData);
-            }else{
-                const newData = data.filter((val) => {
-                    return val.title.toUpperCase().includes(inputVal.toUpperCase())  || val.description.toUpperCase().includes(inputVal.toUpperCase())|| val.publishedAt.toUpperCase().includes(inputVal.toUpperCase())||val.source.name.toUpperCase().includes(inputVal.toUpperCase())
-                })
-                getNewsFromSearch(newData);
-            }
-        })
+                    } else {
+                        pushData(data);
+                    }
+                }else if (categories.includes(inputVal.toLowerCase())) {
+                    getNews(inputVal, countryCode)
+                } else if (["in", "us", "au", "ru", "fr", "gb", "india", "france", "australia", "usa", "russia",].includes(inputVal.toLowerCase())) {
+                    getNews(category, inputVal)
+                }else
+                //  if (category !='general') {
+                //     newData = data2.filter((val) => {
+                //         return val.title.toUpperCase().includes(inputVal.toUpperCase()) || val.description.toUpperCase().includes(inputVal.toUpperCase()) || val.publishedAt.toUpperCase().includes(inputVal.toUpperCase()) || val.source.name.toUpperCase().includes(inputVal.toUpperCase())
+                //     })
+                //     getNewsFromSearch(newData);
+                // }
+                // else
+                 {
+                    newData = data.filter((val) => {
+                        return val.title.toUpperCase().includes(inputVal.toUpperCase()) || val.description.toUpperCase().includes(inputVal.toUpperCase()) || val.publishedAt.toUpperCase().includes(inputVal.toUpperCase()) || val.source.name.toUpperCase().includes(inputVal.toUpperCase())
+                    })
+                    const bestData=newData.concat( data2.filter((val) => {
+                        return val.title.toUpperCase().includes(inputVal.toUpperCase()) || val.description.toUpperCase().includes(inputVal.toUpperCase()) || val.publishedAt.toUpperCase().includes(inputVal.toUpperCase()) || val.source.name.toUpperCase().includes(inputVal.toUpperCase())
+                    }));
+                    console.log(bestData)
+                    getNewsFromSearch(bestData);
+                }
+
+            });
 
     }
     catch (err) {
-        console.log(err);
-    } finally {
-        console.log("Fetch completed.");
+            console.log(err);
+        } finally {
+            console.log("Fetch completed.");
+        }
     }
-}
+
 categoryFilter.addEventListener("change", (e) => {
     category = e.target.value;
     // console.log(selectfilter);
-    getNews(category,countryCode);
+    getNews(category, countryCode);
 })
 countryFilter.addEventListener("change", (e) => {
     countryCode = e.target.value;
     // console.log(selectfilter);
-    getNews(category,countryCode);
+    getNews(category, countryCode);
 })
-getNews(categories[0],countryCode);
+getNews(categories[0], countryCode);
