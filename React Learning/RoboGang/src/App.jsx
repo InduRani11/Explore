@@ -57,7 +57,7 @@ export default function App() {
   // });
   //
   // // Initialize the app
-  fetchUsers();
+  // fetchUsers();
   return (
     <div className='body'>
       <div className="container">
