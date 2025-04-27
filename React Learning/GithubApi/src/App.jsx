@@ -39,7 +39,7 @@ const data=null;
 export default function App() {
   const [userData, setUserData] = useState({});
 
-  const [error, setError] = useState();
+  const [error, setError] = useState("");
 
   // async function getUserData(username) {
   //   const response = await fetch(`https://api.github.com/users/${username}`);
@@ -55,7 +55,7 @@ export default function App() {
     fetch(`https://api.github.com/users/${username}`)
       .then((response) => {
         console.log(response.status)
-        if(response.status== "404"){
+        if(response.status== 404){
           setUserData({});
         setError( "User not found");
         }
@@ -63,6 +63,9 @@ export default function App() {
       })
       .then((data) => {
         setError("");
+        if(data.message== 'Not Found'){
+          setError( "User not found");
+        }
         console.log(data);
         setUserData(data);
       })
@@ -76,11 +79,12 @@ export default function App() {
   return (
     <div className=" max-w-[1280px] m-auto App flex flex-col gap-8 p-8 justify-center min-h-screen overflow-auto">
       <UserSearch handleSubmit={handleSubmit} />
-      {error ? (
-        <div className="w-full text-center justify-center flex gap-4 p-4 bg-white border-red-500 shadow-red-500 rounded-md shadow-md m-auto">
+      {error? (
+        <div className="w-full text-center justify-center flex gap-4 p-4 bg-white text-black border-red-500 shadow-red-500 rounded-md shadow-md m-auto">
           {error}
         </div>
-      ) : userData?.login? <UserCard userData={userData} /> : <></>}
+      ) :  <></>}
+      {userData?.login? <UserCard userData={userData} /> :<></>}
     </div>
   );
 }
@@ -89,11 +93,12 @@ function UserSearch({ handleSubmit = () => { } }) {
   // abc("sdvbsjdb")
   const [input, setInput] = useState("");
 
-  function submitFn(e=null ) {
-    e.preventDefault();
+  function submitFn(e ) {
+
     setInput(document.querySelector("input[type='search']").value)
     console.log(e)
     if (input) handleSubmit(e, input);
+    e.preventDefault();
   }
 
 
@@ -106,7 +111,10 @@ function UserSearch({ handleSubmit = () => { } }) {
 
   return (
     <form
-      onSubmit={submitFn}
+      onSubmit={(e)=>{
+        e.preventDefault();
+        submitFn(e);
+      }}
       className="w-full flex gap-4 p-4 bg-slate-200 rounded-md shadow-md m-auto"
     >
       <input
@@ -115,11 +123,15 @@ function UserSearch({ handleSubmit = () => { } }) {
         className="border-gray-400 rounded-md px-4 py-2 border-2 flex-1"
         autoFocus
         value={input}
-
+        onChange={(e)=>{setInput(e.target.value)}}
       />
       <button
         type="submit"
-        onInput={submitFn}
+        onSubmit={(e)=>{
+        e.preventDefault();
+
+          submitFn(e);
+        }}
         className="bg-green-500 text-white font-semibold px-4 py-2 rounded-md"
       >
         Search
