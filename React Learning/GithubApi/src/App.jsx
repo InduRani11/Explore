@@ -132,7 +132,7 @@ function UserSearch({ handleSubmit = () => { } }) {
 
           submitFn(e);
         }}
-        className="bg-green-500 text-white font-semibold px-4 py-2 rounded-md"
+        className="bg-green-500 lg:bg-amber-600 text-white font-semibold px-4 py-2 rounded-md"
       >
         Search
       </button>

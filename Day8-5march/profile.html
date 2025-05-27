@@ -39,10 +39,12 @@
                 align-items: center;
                 padding: 15px 15px;
             }
-            .Video{
+
+            .Video {
                 gap: 30px;
                 margin-top: 50px;
             }
+
             .video-element iframe {
                 width: 60%;
                 flex-direction: row;
@@ -72,7 +74,8 @@
                 align-items: center;
                 padding: 15px 15px;
             }
-            .project-card img{
+
+            .project-card img {
                 width: 60%;
                 border-radius: 10px;
             }
@@ -88,11 +91,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Skill</a></li>
-                <li><a href="#">Progress</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="cta">Resume</button>
 
@@ -112,7 +115,7 @@
                 <img src="img.jpeg" alt="profile image">
             </div>
         </section>
-        <section class="skill">
+        <section id="skill" class="skill">
             <h1>My <span>Skill</span></h1>
             <p>Here are some skills on which I am working</p>
             <div class="skill-container">
@@ -154,47 +157,47 @@
 
             </div>
         </section>
-        <section class="Video">
+        <section id="progress" class="Video">
             <h1>My Video <span>Progress</span></h1>
             <p>Here is a quick demo of my progress so far in Web Development!</p>
-            <button>Visit my LinkedIn</button>
+            <button><a href="https://www.linkedin.com/in/indurani27/">Visit my LinkedIn</a></button>
             <div class="video-list">
                 <div class="video-element">
-                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ"
+                    <iframe src="https://www.youtube.com/embed/HcOc7P5BMi4?si=ggC3SwpfA9bUQSAz"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="video-element-content">
                         <h4>Day 1</h4>
-                        <h1>Topic 1</h1>
-                        <p>Lojhgfdgnlit. Enim, tempora!</p>
+                        <h1>HTML</h1>
+                        <p>learn all basic concept of html:5</p>
                     </div>
                 </div>
                 <div class="video-element">
-                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ"
+                    <iframe src="https://www.youtube.com/embed/ESnrn1kAD4E?si=2KPkyCGzsbVTqU4v"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="video-element-content">
                         <h4>Day 2</h4>
-                        <h1>Topic 2</h1>
-                        <p>Lorem ipsum dr adipisicing elit. Enim, tempora!</p>
+                        <h1>CSS</h1>
+                        <p>Here you can learn about all basic concepts of css.</p>
                     </div>
                 </div>
                 <div class="video-element">
-                    <iframe src="https://www.youtube.com/embed/1vsmaEfbnoE?si=ZFf9CMItmRjLyojQ"
+                    <iframe src="https://www.youtube.com/embed/Hr5iLG7sUa0?si=S1SKXxn5xRZ-cYyB"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="video-element-content">
                         <h4>Day 3</h4>
-                        <h1>Topic 3</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, tempora!</p>
+                        <h1>JavaScript</h1>
+                        <p>Start your JavaScript journey from here... </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="project">
+        <section id="project" class="project">
 
             <h1>Projects</h1>
             <p>I have worked on a wide range of projects. Here are some of my projects.</p>
@@ -204,7 +207,11 @@
                     <div class="p-content">
                         <h4>To Do List App</h4>
                         <h6>Frontend project</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                        <p>This To-Do List is a productivity app that helps users keep track of tasks. Users can add new
+                            tasks, mark them as completed, and delete them when no longer needed. It typically includes
+                            features task editing, and status tracking to organize daily activities
+                            efficiently.</p>
+                        <a href="">click here to use...</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -212,20 +219,27 @@
                     <div class="p-content">
                         <h4>TIC-TAC-TO</h4>
                         <h6>Frontend project</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                        <p>Tic-Tac-Toe is a classic two-player game played on a 3x3 grid. Players take turns marking a
+                            cell with either X or O. The first player to align three of their marks in a row
+                            (horizontally, vertically, or diagonally) wins. If all cells are filled without a winner,
+                            the game ends in a draw.</p>
+                        <a href="">click here to use...</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="img.jpeg" alt="">
                     <div class="p-content">
-                        <h4>Project Name</h4>
-                        <h6>About the project</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facilis.</p>
+                        <h4>News App</h4>
+                        <h6>Frontend Project</h6>
+                        <p>A News App with subsections organizes news into categories like World, Technology, Sports,
+                            and more for easy navigation. It helps users quickly access updates based on their
+                            interests.</p>
+                        <a href="">click here to use...</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="education">
+        <section id="education" class="education">
             <h1>Education</h1>
             <p>My education has been a journey of self-discovery and growth.
                 Here are some details.</p>
@@ -265,7 +279,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="contact">
         <h1>Contact</h1>
         <p>Feel free to reach out to me for any questions or opportunities!</p>
         <div class="link-div">
