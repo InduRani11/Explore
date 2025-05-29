@@ -19,22 +19,22 @@
 //
 // a=a+"jhdgs";
 // console.log(a);
-// // named fn
-// function abc(a,b,d ,e=0){
-//     console.log(a,b,d,e)
-//     console.log(typeof(a),typeof(b),typeof(d),typeof(e))
-// }
-// abc(2, 5);
-// console.log(abc);
-// // anonyms fn
-// // var x=function (){console.log("i am anonymus! ")};
-// var nabc=function (a,b,d ,e=0){
-//     console.log(a,b,d,e)
-//     console.log(typeof(a),typeof(b),typeof(d),typeof(e));
-//     a();
-//     // console.log(x);
-//     x();
-// }
+// named fn
+function abc(a,b,d ,e=0){
+    console.log(a,b,d,e)
+    console.log(typeof(a),typeof(b),typeof(d),typeof(e))
+}
+abc(2, 5);
+console.log(abc);
+// anonyms fn
+// var x=function (){console.log("i am anonymus! ")};
+var nabc=function (a,b,d ,e=0){
+    console.log(a,b,d,e)
+    console.log(typeof(a),typeof(b),typeof(d),typeof(e));
+    a();
+    // console.log(x);
+    x();
+}
 // nabc(function (){console.log("i am anonymus! ")}, 5);
 // function x(){console.log("i am anonymus! ")};
 // // let x=function (){console.log("i am anonymus! ")};
