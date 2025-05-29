@@ -14,10 +14,10 @@
             padding: 0;
         }
 
-        body{
+        body {
             width: 100dvw;
             height: 100dvh;
-            background-color: rgb(150, 240, 240);
+            background-color: rgb(209, 231, 243);
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -25,17 +25,21 @@
             line-height: 0%;
 
         }
+
         .our-body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 50%;
+            min-width: 400px;
+            max-width: 700px;
             background-color: rgb(91, 91, 234);
             padding-block: 20px;
             padding-inline: 0px;
             border-radius: 8px;
-            border: 8px solid rgb(255, 255, 255);
-            box-shadow: 6px 6px 4px rgba(34, 33, 33, 0.5);
+            border: 8px 8px 4px solid rgba(57, 167, 231, 0.137);
+            box-shadow: 0 8px 24px rgba(84, 91, 184, 0.644),
+                /* main deep shadow */
+                0 4px 8px rgba(115, 157, 212, 0.521);
         }
 
         .temp-body {
@@ -54,35 +58,45 @@
             padding-inline: 8px;
             gap: 20px;
         }
-        .data{
+
+        .data {
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
 
-        p{
-            font-size: 20px;
+        p {
+            font-size: 18px;
             font-weight: 500;
+            line-height: normal;
         }
-        #search {
-            width: 80%;
 
-            border-radius: 20px;
+        #search {
+
+            border-radius: 10px;
             border: 2px solid white;
             padding-left: 20px;
-            font-size: 2rem;
+            font-size: 1.5rem;
+            display: flex;
+            flex-grow: 1;
+            line-height: 2.5rem;
 
         }
 
         #search-btn {
-            width: 15%;
+            width: 3.5rem;
             height: 2rem;
-            border-radius: 20px;
+            height: 2.5rem;
+            border-radius: 10px;
             border: 2px solid white;
 
         }
 
-
+        .popup-shadow {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
+                0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease;
+        }
 
         img {
             width: 40%;
@@ -93,7 +107,9 @@
         .wind-speed-cont {
             display: flex;
             flex-direction: row;
-            gap: 20px;
+            flex-wrap: wrap;
+            height: fit-content;
+            gap: 8px;
             align-items: center;
             justify-content: center;
             width: 50%;
@@ -113,13 +129,13 @@
 </head>
 
 <body>
-    <div class="our-body">
+    <div class="popup-shadow our-body">
         <div class="search-container">
-            <input type="search" placeholder="search" name="search" id="search">
-            <button id="search-btn"><img src="search.png" alt=""></button>
+            <input class="popup-shadow" type="search" placeholder="search" name="search" id="search">
+            <button class="popup-shadow" id="search-btn"><img src="search.png" alt=""></button>
         </div>
         <div class="temp-body">
-            <img src="cloud.png" alt="">
+            <img class="line-height: 2.5rem;" src="cloud.png" alt="">
             <!-- <span class="material-icons">cloudy</span> -->
             <p> <span id="temperature"></span>*F</p>
             <h2 id="location"></h2>
@@ -136,7 +152,7 @@
                 <img src="wind.png" alt="">
                 <div class="data">
                     <h2><span id="wind-speed"></span> km/hr</h2>
-                    <p>wind-speed</p>
+                    <p>wind speed</p>
                 </div>
             </div>
         </div>
