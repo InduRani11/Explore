@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { productsData } from "../constants";
 import { Link, useNavigate } from "react-router";
-import Product from "./product";
+import Product from "./Product";
 
 export default function Home() {
   return (
