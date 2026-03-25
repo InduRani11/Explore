@@ -8,7 +8,7 @@ export default function CategoryBar() {
   }
   return (
     <div className="flex gap-1 overflow-auto bg-[#232F3E] text-white text-sm font-normal whitespace-nowrap relative">
-      <Sidebar open={open} close={close} />
+      <SideBar open={open} close={close} />
       <div
         onClick={() => setOpen(true)}
         className="p-2 flex justify-center items-center gap-2 hover:border-white border border-transparent text-nowrap"
