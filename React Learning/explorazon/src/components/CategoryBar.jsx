@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "./Sidebar";
+import SideBar from "./SideBar";
 
 export default function CategoryBar() {
   const [open, setOpen] = useState(false);

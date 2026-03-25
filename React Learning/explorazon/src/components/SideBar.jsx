@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Sidebar({ open = false, close = () => {} }) {
+export default function SideBar({ open = false, close = () => {} }) {
   console.log("open", open);
   return open ? (
     <div
