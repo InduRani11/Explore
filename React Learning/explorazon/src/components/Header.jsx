@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <div className="w-full bg-[#131921] flex gap-2 px-4 py-1 text-white">
-      <div>Amazon</div>
+      <div>PrimeKart</div>
       <HeaderBox
         Image={null}
         subContent="Delivering to Agra 282007"

@@ -11,8 +11,6 @@ console.log(newArt);
 const categories = ["general", "business", "entertainment", "health", "science", "sports", "technology"];
 
 
-
-
 categories.forEach((cat) => {
     const option = document.createElement('option');
     option.value = cat;
